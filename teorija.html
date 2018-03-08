@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<title>Lebdenje v zraku</title>
+		<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="shortcut icon" href="images/ball.ico" />
+		<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="jquery.dropotron-1.0.js"></script>
+		<script type="text/javascript" src="init.js"></script>
+        <script type="text/javascript" src="latexit.js"></script>
+        <script type="text/javascript">
+        $(function() {
+
+            var $sidebar   = $("#sidebar"), 
+                $window    = $(window),
+                offset     = $sidebar.offset(),
+                topPadding = 30;
+                //alert($sidebar.offset().top+"");
+
+            $window.scroll(function() {
+                if ($window.scrollTop() > offset.top) {
+                    $sidebar.stop().animate({
+                        marginTop: $window.scrollTop() - offset.top + topPadding
+                    });
+                } else {
+                    $sidebar.stop().animate({
+                        marginTop: 0
+                    });
+                }
+            });
+            
+        });
+        </script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="splash">
+				<img src="images/pic1.png" alt="" />
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">Domov</a></li>
+                    <li><a href="ekipa.html">Ekipa</a></li>
+					<li>
+						<a href="teorija.html">Teorija</a> <span class="arrow"></span>
+						<ul>
+							<li class="first"><a href="teorija.html#newton">Newtonovi zakoni</a></li>
+                            <li><a href="teorija.html#bernulli">Bernoullijeva formula</a></li>
+                            <li><a href="teorija.html#upor">Kvadratni zakon upora</a></li>
+                            <li class="last"><a href="teorija.html#ravnovesje">Ravnovesje sil</a></li>
+						</ul>
+					</li>
+					<li><a href="delo.html">Delo in meritve</a></li>
+					<li class="last"><a href="ugotovitve.html">Ugotovitve</a></li>
+				</ul>
+				<br class="clearfix" />
+			</div>
+			<div id="header">
+				<div id="logo">
+					<h1><a href="index.html">Lebdenje v zraku</a></h1>
+				</div>
+			</div>
+			<div id="page">
+				<div id="content">
+					<div class="box">
+                        <ul class="section-list">
+                            <li class="first">
+                                <p>
+                                Ker smo dobri fiziki, bomo tudi našo teorijo zgradili v grobem približku, poenostavljeno in zanemarjeno. Tudi pri meritvah pričakujemo velike napake zaradi zunanjih vplivov, naključij, nezmožnosti natančnega določanja potrebnih podatkov itn. Zato bo tudi teorija le grob približek, ki pa bi vseeno morala dati rezultat znotraj napak.
+                                <br />
+                                Pri našem poskusu smo preverjali, kako se obnaša ping pong žogica v poševnem curku zraka. Curek smo nagibali in opazovali kot, pri kateremu žogica pade iz njega. Preverili smo odvisnost tega kota od širine curka pri izvoru in od hitrosti vetra. Da bi natančneje razložili pojav, smo določili hitrostni profil curka.
+                                <br />
+                                ogico damo v curek zraka in počakamo, da se umiri v stabilni legi. To je lega, kamor jo tišči rezultanta sil, če jo malo izmaknemo iz nje. Teorija pravi, da bo ta lega v sredini curka, na neki določeni višini, odvisni od hitrosti zraka.
+                                </p>
+                                <p>
+                                Našo teorijo smo zgradili na treh fizikalnih zakonih:
+                                </p>
+                                <p>
+                                -	Newtonovi zakoni,<br />
+                                -	Bernoullijeva enačba,<br />
+                                -	kvadratni zakon upora. <br />
+                                </p>
+                                <p>
+                                Pri računanju bomo uporabili nekaj konstant:
+                                </p>
+                                <p>
+                                -	<span  lang="latex">C_{u}=0,5</span>; koeficient upora za gladko kroglo (<a href="http://www.grc.nasa.gov/WWW/k-12/airplane/dragsphere.html 20.5.2013">vir</a>) <br />
+                                -	<span  lang="latex">\rho=1,2 kg/m^{3}</span>; gostota zraka (vir: wikipedia) <br />
+                                -	<span  lang="latex">\eta=1,78*10^{-5} {kg}/{m}</span>; viskoznost zraka (vir: wikipedia)<br />
+                                -	<span  lang="latex">g=10 {m}/{s^2}</span>; gravitacijski pospešek na površju zemlje (približek)<br />
+                                -	<span  lang="latex">p_0=1 bar</span>; zračni tlak<br />
+                                </p>
+                                <h3>Skica poskusa</h2>
+                                <p style="float:left;">
+                                <img src="images/ravnovesje.png" alt="Ravnovesje sil" />
+                                </p>
+                                <p>
+                                <br /><br />
+                                <span  lang="latex">F_b</span> je sila zaradi razlike tlakov, ki kaže pravokotno na curek; podrobneje je definirana v poglavju <a href="#ravnovesje">Ravnovesje sil</a>. <br /><br />
+                                <span  lang="latex">F_u</span> je sila upora po kvadratnem zakonu upora; podrobneje v razdelku <a href = "#upor">Kvadratni zakon upora</a>. <br /><br />
+                                <span  lang="latex">F_g</span> je gravitacijska sila Zemlje na žogico. <br />
+                                </p>
+                            </li>
+                            <a name="newton"></a>
+                            <li>
+                                <h2>Newtonovi zakoni</h2>
+                                <p>
+                                    1.	Newtonov zakon: če so sile na telo v ravnovesju, je ta pri miru ali pa se giblje s konstantno hitrostjo.
+                                    <br />
+                                    2.	Newtonov zakon: Vsota vseh sil na neko telo je enaka produktu mase telesa in pospeška.
+                                    <br />
+                                    3.	Newtono zakon: če prvo telo deluje na drugo telo s silo, deluje to na prvo z enako veliko, a nasprotno usmerjeno silo.
+                                    <br />
+                                </p>
+                                <p>
+                                Ko žogica v curku zaide iz stabilne lege, se pojavi nova sila zaradi razlike tlakov (po Bernoulliju), po drugem Newtonovem zakonu bo sorazmerna s pospeškom, ki žogico pospeši proti stabilni legi.
+                                </p>
+                                <p>
+                                Sili teže pa nasprotuje sila upora, ki v navpičnem curku kaže ravno v nasprotno smer. Tudi tu je ravnovesje stabilno, saj hitrost curka z oddaljenostjo od izvira pada, zato je tudi sila upora manjša (večja) odvisno od tega, kako visoko v curku se nahaja.
+                                </p>
+                            </li>
+                            <a name="bernulli"></a>
+                            <li>
+                                <h2>Bernoullijeva formula</h2>
+                                <p style="text-align: center;">
+                                <img src="images/bernulli.png" alt = "bernulli.png" align="center"/>
+                                </p>
+                                <div align="middle"  lang="latex">
+                                \frac{1}{2} \rho v^2 + \rho g h + p = konst.
+                                </div>
+                                <p>
+                                Če predpostavimo, da je tok laminaren in da je zrak nestisljiv, neviskozen, lahko uporabimo to enačbo za izračun sile <span  lang="latex">F_b</span>. V toku zraka, v katerem ima profil hitrosti obliko parabole, je hitrost v sredini curka večja kot na robu. Zato zrak hitreje teče mimo žogice na polobli, ki je bližje centru curka (v točki 1). Za oceno vzemimo kar hitrost na oddaljenosti R od središča žogice pravokotno proti sredini curka (<span  lang="latex">v_1</span>) in R stran od sredine curka(<span  lang="latex">v_2</span>). Zanemarimo lahko drugi člen v zgornji enačbi (<span  lang="latex">\rho g h</span>), ker se njegova velikost na levi in desni strani enačbe odšteje. Če vzamemo višino v točki 2 za izhodiščno (<span  lang="latex">h_2=0</span>), potem je <span  lang="latex">h_1</span> manj kot premer žogice (največja je lahko <span  lang="latex">h_1=4cm</span>). Potem je <span  lang="latex">\rho g h_1=0,48 N/m^2</span>, kar je zanemarljivo v primerjavi z   <span  lang="latex">1/2 \rho(v_1^2-v_2^2 )=21,6 N/m^2</span> (tu smo vzeli približke, ki smo jih izmerili iz meritev ob žogici, fiksirani v curku 10m/s in 8m/s. Razlika je realno še večja).
+                                </p>
+                                <div align="middle"  lang="latex">
+                                \frac{1}{2} \rho v_{1}^2 + p = \frac{1}{2} \rho v_{2}^2 + (p + \Delta p)
+                                </div>
+                                <div align="middle"  lang="latex">
+                                \Delta p = \frac{\rho}{2} (v_{1}^2 - v_{2}^2)
+                                </div>
+                                <div align="middle"  lang="latex">
+                                F = \Delta p S = S \frac{\rho}{2} (v_{1}^2 - v_{2}^2)
+                                </div>
+                                <p>
+                                V nagnjenem curku razstavimo silo teže na komponento vzporedno s curkom in pravokotno na curek. Če želimo da žogica ostane v curku, bo morala sila <span  lang="latex">F_b</span> nasprotovati pravokotni komponenti sile <span  lang="latex">F_g</span>. Ko je <span  lang="latex">F_b</span> (povezana z razliko hitrosti) manjša od pravokotne komponente <span  lang="latex">F_g</span>, žogica pade iz curka.
+                                </p>
+                            </li>
+                            <a name="upor"></a>
+                            <li>
+                                <h2>Kvadratni zakon upora</h2>
+                                <p>
+                                V navpični smeri sili <span  lang="latex">F_g</span> nasprotuje sila upora. Izračun Reynoldsovega števila<a href="#opomba1"><sup>1</sup></a> nam pokaže, da v našem primeru velja kvadratni zakon upora, ki pravi:
+                                </p>
+                                <div align="middle"  lang="latex">
+                                F_u = \frac{\rho C_u S v_0^2}{2}
+                                </div>
+                                <p>
+                                Curek zraka se meša z okoliškim zrakom, zato se širi, ker pa je pretok zraka enak, bo čez večjo površino moral počasneje teči. Posledično se hitrost zraka po celem curku z oddaljenostjo od izvira manjša. Če se žogica dvigne ali spusti od ravnovesne lege, se <span  lang="latex">F_u</span> zmanjša oz. poveča, zato rezultanta žogico pospeši nazaj v stabilno lego, kjer je <span  lang="latex">F_u = F_g</span> (če je curek navpičen).
+                                </p>
+                                <p>
+                                Ko curek nagnemo, mora sila upora nasprotovati samo komponenti F<sub>g</sub>, ki je vzporedna curku, zato žogica lebdi dlje od izvora (kjer je hitrost curka manjša).
+                                </p>
+                                <p>
+                                <a name="opomba1"><sup>1</sup></a>:Izračun Reynoldsovega števila <br />
+                                <div align="middle"  lang="latex">
+                                Re=\rho v_l/\eta=21000>1000
+                                </div>
+                                </p>
+                            </li>
+                            <a name="ravnovesje"></a>
+                            <li class="last">
+                                <h2>Ravnovesje sil</h2>
+                                <p>
+                                Sedaj bomo napisali ravnovesje sil v primeru, ko žogice lebdi v toku, nagnjenem za nek kot <span  lang="latex">\beta</span>. Žogica je takrat nekoliko nižje v curku in dlje od izvora. 
+                                </p>
+                                <p style="text-align: center;">
+                                <img src="images/ravnovesje.png" alt="Ravnovesje sil" />
+                                </p>
+                                <div align="middle"  lang="latex">
+                                F_u = \frac{\rho C_u S v_0^2}{2}
+                                </div>
+                                <p>
+                                kjer so <span  lang="latex">\rho</span> gostota zraka, <span  lang="latex">C_u</span> koeficient upora, značilen za kroglo, <span  lang="latex">S</span> prečni presek žogice, <span  lang="latex">v_0</span> hitrost curka tam, kjer curek najprej zadane žogico (približek).
+                                </p>
+                                <div align="middle"  lang="latex">
+                                F_g = m g
+                                </div>
+                                <p>
+                                m je masa žogice, g pa gravitacijski pospešek.
+                                </p>
+                                <div align="middle"  lang="latex">
+                                F_b = \Delta p S = S \frac{\rho}{2} (v_{1}^2 - v_{2}^2)
+                                </div>
+                                <p>
+                                <span  lang="latex">\Delta p</span> je razlika tlakov pod in nad žogico, <span  lang="latex">v_1</span> in <span  lang="latex">v_2</span> pa sta hitrosti pod in nad žogico.
+                                </p>
+                                <div align="middle"  lang="latex">
+                                F_g sin \beta = F_u = \frac{\rho C_u S v_0^2}{2}
+                                </div>
+                                <div align="middle"  lang="latex">
+                                F_g cos \beta = F_b = S \frac{\rho}{2} (v_{1}^2 - v_{2}^2)
+                                </div>
+                                <p>
+                                Ko bo curek širši in parabola položnejša in hitrosti manjše, bo tudi razlika hitrosti <span  lang="latex">v(x)</span> in <span  lang="latex">v ( x + 2 R )</span>, kjer je <span  lang="latex">x</span> pravokotna oddaljenost od sredine curka, manjša. Ko razlika kvadratov hitrosti ni več dovolj velika, da bi nasprotovala pravokotni komponenti sile teže, žogica pade. Z zgornjimi približki lahko preverimo rezultate.
+                                </p>
+                                <p>
+                                Če pa <span  lang="latex">v_0</span> ne bi bila več dovolj velika, da bi nasprotovala komponenti teže, ki kaže v smeri curka, bi žogica padla proti izvoru curka, kjer je <span  lang="latex">v_0</span> večja in se zato tudi sila upora spet poveča. Tako da žogica zapusti curek res zaradi prej navedenega razloga.
+                                </p>
+                                
+                            </li>
+                            
+                        </ul>
+					</div>
+				</div>
+				<div id="sidebar">
+					<div class="box">
+						<h3>Vsebina</h3>
+						<ul class="list">
+							<li class="first"><a href="teorija.html#newton">Newtonovi zakoni</a></li>
+							<li><a href="teorija.html#bernulli">Bernoullijeva formula</a></li>
+							<li><a href="teorija.html#upor">Kvadratni zakon upora</a></li>
+                            <li class="last"><a href="teorija.html#ravnovesje">Ravnovesje sil</a></li>
+						</ul>
+					</div>
+				</div>
+				<br class="clearfix" />
+			</div>
+		</div>
+		<div id="footer">
+			&copy; 2012 FMF | Powered by <a href="http://nodethirtythree.com/jquery/dropotron">Dropotron</a> | Design by <a href="http://nodethirtythree.com">nodethirtythree</a> and <a href="http://www.freecsstemplates.org/">FCT</a>.
+		</div>
+	</body>
+</html>

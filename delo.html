@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<title>Lebdenje v zraku</title>
+		<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="shortcut icon" href="images/ball.ico" />
+		<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="jquery.dropotron-1.0.js"></script>
+		<script type="text/javascript" src="init.js"></script>
+        <script type="text/javascript" src="latexit.js"></script>
+        <script type="text/javascript">
+        function showhide(){
+            elem = document.getElementById("hidden");
+            if (elem.style.display == "block"){
+                elem.style.display = "none";
+                return;
+            }
+            elem.style.display = "block";
+        }
+            
+        </script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="splash">
+				<img src="images/pic1.png" alt="" />
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">Domov</a></li>
+                    <li><a href="ekipa.html">Ekipa</a></li>
+					<li>
+						<a href="teorija.html">Teorija</a> <span class="arrow"></span>
+						<ul>
+							<li class="first"><a href="teorija.html#newton">Newtonovi zakoni</a></li>
+                            <li><a href="teorija.html#bernulli">Bernoullijeva formula</a></li>
+                            <li><a href="teorija.html#upor">Kvadratni zakon upora</a></li>
+                            <li class="last"><a href="teorija.html#ravnovesje">Ravnovesje sil</a></li>
+						</ul>
+					</li>
+					<li><a href="delo.html">Delo in meritve</a></li>
+					<li class="last"><a href="ugotovitve.html">Ugotovitve</a></li>
+				</ul>
+				<br class="clearfix" />
+			</div>
+			<div id="header">
+				<div id="logo">
+					<h1><a href="index.html">Lebdenje v zraku</a></h1>
+				</div>
+			</div>
+			<div id="page">
+				<div id="content">
+					<div class="box">
+						<h2>Delo in meritve</h2>
+                        <p>
+							Za preverjanje našega teoretičga modela smo morali med praktičm delom preveriti naslednje parametre: <br /><br />
+                            - Kaj je najbolj optimalna oblika šobe za čim bolj laminaren tok<br />
+                            - Kako se spreminja hitrost vetra v odvisnosti od napetosti na fenu, oddaljenosti od izpuha, z radijem od sredine izpuha, oblike šobe  ter kako se spreminja okoli žogice<br />
+                            - Kako hitrost vetra vpliva na največji možni odklon<br />
+                            - Kako se spreminja največji možni odklon v odvisnosti od premera izpuha<br />
+                            - Pri kakšni hitrosti vetra žogica pade<br />
+                        </p>
+                        <p>
+                        V prvem terminu praktičnega dela smo se najprej seznanili z opremo. Na voljo smo imeli tri izvire zračnega toka, navaden sušilnik za lase in pa še dva večja fena. Kratko uvodno poizkušanje je nakazalo, da bomo meritve nadaljevali z enim od večjih dveh fenov, kjer smo lahko lažje regulirali obliko izpuha in pretok zraka.
+                        <br />
+                        Ker smo od ene prejšnjih skupin dobili namig da bomo najbolj laminaren tok dosegli, če bo šel ta skozi skupek cevk, smo se odločili, da bomo najprej preverili ta namig. Iz gumijastih cevi smo zlepili izpuh in se lotili meritev. Dogajanje smo snemali s kamero in kote določevali pozneje z računalniško obdelavo.
+                        Osnovni izpuh je bil premera 3,8 cm, nato pa smo ga napolnili z gumijastimi cevkami premera 1 cm in notranjega premera 0,6 cm.
+                        <br />
+                        Hkrati kot smo preverjali razliko med izpuhom s in brez cevk, smo preverjali še odvisnost od napetosti na fenu, oz. od tega kako močno piha. Meritve so pokazale, da se princip s cevkami bolje izkaže kakor samo izpuh brez cevk, saj smo s cevkami dosegali manjše kote od vodoravnice kot brez.
+                        </p>
+                        <p style="text-align:center;">
+                        <img src="images/kot_napetost.png" alt="Kot(Napetost)" />
+                        </p>
+                        <p>
+                        Večja napetost in hitrost je v primeru, ko smo kot izpuh uporabili tistega iz gumijastih cevk, pomenila manjši kot, vendar se pri velikih napetostih (od 180V dalje) kot ni več bistveno zmanjševal. Pri meritvi brez cevk pa se je kot, pri katerem žogica pade, z večjo napetostjo povečeval.
+                        </p>
+                        <p>
+                        Iz posnetkov smo lahko določili tudi kako se spreminja oddaljenost žogice z nagnjenostjo fena. Naslednji graf prikazuje oddaljenost žogice od šobe v odvistnosti od nagiba za tri šobe pri treh napetostih.
+                        </p>
+                        <p style="text-align:center;">
+                        <img src="images/odmik.png" alt="Oddaljenost(Kot)" />
+                        <iframe width="640" height="480" src="http://www.youtube.com/embed/lstF-nnJI40" frameborder="0" allowfullscreen></iframe>
+                        </p>
+                        <p>
+                        Vidno je da se žogica s tem ko se s fenom približujemo vodoravnici, čedalje bolj oddaljuje od izvora zračnega curka do točke kjer pade.                        
+                        </p>
+                        <p style="margin-bottom:0px">
+                        V drugem terminu smo se lotili raziskovanja profilov hitrosti vetra pri različnih višinah in napetostih. Meritve smo opravili z anemometrom, merilcem hitrosti vetra. 
+                        <br />
+                        Naslednja dva grafa prikazujeta  hitrost zračnega toka v odvisnosti od napetosti pri različnih višinah, prvi za šobo s cevkami in drugi za brez cevk.
+                        Za regresijo smo uporabili funkcijo oblike <span lang="latex">v(U)=(a \cdot U)^x</span>. Za podroben ogled funkcij in razloga za izbiro take oblike klikni spodaj. <br />
+                        <a href="#hide" name="hide" onclick = "showhide();">Pokaži/skrij</a>
+                        </p>
+                        <div id = "hidden">
+                        <h4>Izpeljava</h4>
+                        <p>
+                        Začeli smo z osnovno enačbo, ki povezuje moč pihalnika in kinetične energije vetra v nekem kratkem časovnem intervalu. <br />
+                        <span lang = "latex">P dt = dW</span> <br />
+                        Nato smo upoštevali, da ima pihalnik nekaj izgub pri pretvarjanju z električne energije in razpisali kinetično energijo plina, ki smo ga v kratkem času pospešili na hitrost v. <br />
+                        <span lang = "latex">\eta U I dt = \frac{1}{2} v^2 dm</span><br />
+                        <span lang = "latex">2 \eta U \frac U R = v^2 \frac{dm}{dt} = v^3 S \rho</span> <br />
+                        <span lang = "latex">v = \left(\frac{2 \eta}{S R \rho} U^2\right)^\frac{1}{3}</span> <br />
+                        Na podlagi tega bi lahko pričakovali potenčno funkcijo s konstantnim eksponentom (2/3), a smo vmes dejali, da se pihalnik ravna po Ohmovem zakonu, kar pa vemo, da ni zelo verjetno. Tako smo posplošili funkcijo na vse potenčne funkcije oblike <span lang="latex">v(U)=(a \cdot U)^x</span>.
+                        </p>
+                        <h4>Rezultati</h4>
+                        <table border="1">
+                            <tr>
+                                <th></th>
+                                <th>Višina <span lang = "latex">\left[cm\right]</span></th>
+                                <th>x</th>
+                                <th><span style="float:left;">a</span> <span lang = "latex" style="float:right;">\left[\frac {m^{- x}}{s^{- x} V}\right]</span></th>
+                            </tr>
+                            <tr>
+                                <th rowspan="3">Z nameščenimi<br />slamicami</th>
+                                <td>9</td>
+                                <td>0,895</td>
+                                <td>0,111</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>0,760</td>
+                                <td>0,134</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>0,801</td>
+                                <td>0,134</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3">Brez slamic</th>
+                                <td>9</td>
+                                <td>0,783</td>
+                                <td>0,252</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>0,819</td>
+                                <td>0,168</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>0,664</td>
+                                <td>0,257</td>
+                            </tr>
+                        </table>
+                        </div>
+                        <p style="text-align:center;">
+                        <img src="images/hitrost1.png" alt="Hitrost(Napetost)" />
+                        <img src="images/hitrost2.png" alt="Hitrost(Napetost)" />
+                        </p>
+                        <p>
+                        Očitno je, da smo pri šobi brez cevk dosegli večje hitrosti, vendar je takrat tok bolj turbulenten in zato žogica ne stoji v curku. Pri šobi s cevkami pa so hitrosti manjše, tok je bolj laminaren, in žogica je stabilnejša. Opazno je tudi to, da ko povečamo napetost in s tem pretok in hitrost curka, hitrost blizu šobe narašča hitreje kakor daleč od šobe.
+                        </p>
+                        <p>
+                        Preverili smo tudi kako zgleda profil hitrosti za šobo s cevkami s premerom 3,8 cm pri dveh različnih napetostih, kar prikazujeta naslednja dva primera, prvi za napetost 150V in drugi za 220V.  V teoretičnem delu smo napisali, da pričakujemo paraboličen profil hitrosti, a smo že med izvajanjem meritev opazili, da to velja le za točke blizu sredine izpuha, za tiste, ki so na robu pa lahko rečemo, da je hitrost enaka 0 m/s. Ocenjujemo, da nam parabola še vedno dovolj dobro opiše profil hitrosti. 
+                        </p>
+                        <p style="text-align:center;">
+                        Regresija s parabolično funkcijo pri napetostih 150V in 220V
+                        <img src="images/parabola150.png" alt="profil hitrosti" />
+                        <img src="images/parabola220.png" alt="profil hitrosti" />
+                        </p>
+                        <p>
+			V tretjem terminu pa smo se posvetili predvsem temu, kako premer izpuha vpliva na maksimalni odklon. Izdelali smo več izpuhov z različnimi premeri iz plastičnih slamic, ki smo jih po potrebi menjali. Ena slamica je imela premer 0,6 cm.
+                        </p>
+                        <p>
+                        Ti so bili: <br />
+                        Modri: premer 4,7 cm, <br />
+                        Vijolični: premer 2,9 cm, <br />
+                        Rumeni  premer 3,6 cm, <br />
+                        Zeleni: premer 2,1 cm, <br />
+                        ter še dva manjša, eden sestavljen iz treh slamic, ter drugi, ki je bil samo ena slamica.
+                        </p>
+                        <p>
+                        Po začetnem preizkušanju smo izločili najširši izpuh in pa dva najmanjša, saj žogica v zračnih tokovih teh treh izpuhov ni bila stabilna, kar je privedlo do padca že pri manjših odmikih. Tako smo meritve nadaljevali s preostalimi tremi.
+                        </p>
+                        <p style="text-align:center;">
+                        <img src="images/slamce.png" alt="Slamice" />
+                        <br />
+                        Izpuhi, narejeni iz slamic
+                        </p>
+                        <p>
+                        Naslednji  graf prikazuje povprečne kote, ki smo jih s posameznimi izpuhi pri različni napetostih.
+                        </p>
+                        <p style="text-align:center;">
+                        <img src="images/pkot_napetost.png" alt="Kot(Napetost)" />
+                        </p>
+                        <p>
+                        Najmanjše kote smo dosegli z vijoličnim izpuhom (premer je 2,9 cm). Iz grafa je še razvidno, da če premer povečamo, žogica pade že pri večjih kotih, tak je rumeni izpuh s premerom 3,6 cm. Ti dve meritvi sta v kontradikciji z meritvijo z gumijastimi cevkami, ki smo jo naredili na začetku. Ta meritev je pokazala, da če močno povečamo napetost, dosežemo manjši kot, medtem ko za vijolični in rumeni izpuh pri tej meritvi očitno, da je najmanjše kote dosežemo pri nizkih napetostih. Takrat fen ne piha močno in je žogica nizko nad izpuhom. Enako smo opazili pri meritvi brez izpuhov iz cevk in slamic. Nižje od 150 voltov napetosti nismo mogli meriti, saj žogica v zračnem curku pri teh napetostih ne lebdi več, tako da opazovanega pojava nismo mogli preučiti.. Posebna je meritev z zelenim izpuhom, najožjim od treh preizkušancev, kjer pa je odvisnost od napetosti ponovno drugačna, podobna tisti iz začetka z gumijastimi cevkami.  
+                        </p>
+                        <p>
+                        Naredili smo še meritev  hitrosti vetra v odvisnosti od razdalje od izpuha pri različnih napetostih za zeleni izpuh.
+                        </p>
+                        <p style="text-align:center;">
+                        <img src="images/hitrost_oddaljenost.png" alt="Hitrost(Oddaljenost)" />
+                        </p>
+                        
+                       
+					</div>
+					<br class="clearfix" />
+				</div>
+				<br class="clearfix" />
+			</div>
+		</div>
+		<div id="footer">
+			&copy; 2012 FMF | Powered by <a href="http://nodethirtythree.com/jquery/dropotron">Dropotron</a> | Design by <a href="http://nodethirtythree.com">nodethirtythree</a> and <a href="http://www.freecsstemplates.org/">FCT</a>.
+		</div>
+    <script type="text/javascript">showhide();showhide();</script>
+	</body>
+</html>
